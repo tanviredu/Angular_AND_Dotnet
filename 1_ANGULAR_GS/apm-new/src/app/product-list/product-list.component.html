@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th><button class="btn btn-primary" (click)='toogleImage()' >{{showImage? 'Hide':'Show' }} Images</button></th>
+                        <th><button class="my-button-class" (click)='toogleImage()' >{{showImage? 'Hide':'Show' }} Images</button></th>
                         <th>Product</th>
                         <th>Code</th>
                         <th>Available</th>
@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let product of products;index as i'>
+                    <tr *ngFor='let product of filteredProducts;index as i'>
                         <td>{{i+1}}</td>
                         <td>
                             <img [src]='product.imageUrl' 
@@ -42,7 +42,7 @@
                             >
                         </td>
                         <td>{{product.productName}}</td>
-                        <td>{{product.productCode| lowercase}}</td>
+                        <td>{{product.productCode| lowercase| convertToSpaces: '-' }}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency: 'USD':'symbol':'1.2-2' | lowercase}}</td>
                         <td>{{product.starRating}}</td>
