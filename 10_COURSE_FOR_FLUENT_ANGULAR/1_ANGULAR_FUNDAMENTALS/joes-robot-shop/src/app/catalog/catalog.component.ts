@@ -18,7 +18,10 @@ export class CatalogComponent {
       category : "Heads",
       price: 945.0,
       discount : 0.2
-    }
+    };
+  }
+  getImageUrl(product : Iproduct){
+    return "/assets/images/robot-parts/" + product.imageName;
   }
 
 }
