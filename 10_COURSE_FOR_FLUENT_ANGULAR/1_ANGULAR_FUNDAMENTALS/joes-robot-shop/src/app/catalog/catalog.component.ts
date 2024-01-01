@@ -197,5 +197,16 @@ export class CatalogComponent {
       return this.products.filter((product) => product.category === this.filter);
     }
   }
+  getDiscountedClasses(product:Iproduct){
+    if (product.discount > 0){
+      // we return a single string
+      // or an array of string for different 
+      // css class
+      return ['strikethrough'];
+    }
+    else{
+      return []
+    }
+  }
 
 }

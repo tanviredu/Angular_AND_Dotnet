@@ -77,3 +77,11 @@
     margin-top: -15px;
     color: magenta;
   }
+
+  a{
+    font-weight: bold;
+  }
+  .strikethrough{
+    text-decoration: line-through;
+    font-size: 18px;
+  }
